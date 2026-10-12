@@ -19,7 +19,7 @@ with DAG(
     'test_git_sync_dag',
     default_args=default_args,
     description='A simple test DAG to verify git-sync and execution',
-    schedule_interval=timedelta(days=1),
+    schedule=timedelta(days=1),  # <-- Changed from schedule_interval to schedule
     start_date=datetime(2026, 1, 1),
     catchup=False,
     tags=['test', 'git-sync'],
