@@ -1,7 +1,8 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
-IMAGE = "ghcr.io/milan-pdll/spark-py:3.5.0-v1"
+
+IMAGE = "ghcr.io/milan-pdll/spark-py:3.5.0-v2"
 PG_SECRET = "postgres-conn"
 
 # Make the Postgres credentials available to driver and executors alike
